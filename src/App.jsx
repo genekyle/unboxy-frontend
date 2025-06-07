@@ -4,8 +4,12 @@ import ProductList from './components/ProductList';
 function App() {
   const [apiStatus, setApiStatus] = useState("Checking...");
 
+  const apiBase = import.meta.env.PROD
+    ? "https://api.unbxy.com"
+    : "http://localhost:8000";
+
   useEffect(() => {
-    fetch("http://localhost:8000/api/status")
+    fetch(`${apiBase}/api/status`)
       .then((res) => res.json())
       .then((data) => setApiStatus(data.message))
       .catch(() => setApiStatus("API unavailable"));
@@ -16,7 +20,7 @@ function App() {
       <h1>Welcome to Unboxy</h1>
       <p>Backend API Status: <strong>{apiStatus}</strong></p>
       <hr style={{ margin: "2rem 0" }} />
-      <ProductList />
+      <ProductList apiBase={apiBase} />
     </main>
   );
 }

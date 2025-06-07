@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function ProductList() {
+function ProductList({ apiBase }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
