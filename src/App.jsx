@@ -17,7 +17,10 @@ function App() {
 
   return (
     <main style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h1>Welcome to Unboxy</h1>
+      <h1 className="text-sm font-bold text-blue-600">
+        Welcome to Unboxy
+      </h1>
+      <h1 className="bg-red-500 text-white p-4 text-2xl">Tailwind Is Working</h1>
       <p>Backend API Status: <strong>{apiStatus}</strong></p>
       <hr style={{ margin: "2rem 0" }} />
       <ProductList apiBase={apiBase} />
