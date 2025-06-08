@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ProductList from './components/ProductList';
+import ProductList from './components/ProductList/ProductList.jsx';
 
 function App() {
   const [apiStatus, setApiStatus] = useState("Checking...");
