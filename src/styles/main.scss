@@ -1,0 +1,12 @@
+$primary-color: #3b82f6;
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2rem;
+}
